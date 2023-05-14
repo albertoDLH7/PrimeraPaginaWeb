@@ -1,0 +1,213 @@
+/*funciones del LOGIN */
+function validarinicio(email,pass){/*esta funcion sirve para darle un requisitos tanto a la contraseña como a los correos */
+  var ex = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  var esValido = ex.test(email);
+  var expR = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
+  var esValid = expR.test(pass);
+  if(esValido==true){
+    if (esValid==true){
+       window.location = "principal.html"
+    } else{
+      alert("la contraseña no es valida")
+    }
+  } else{
+    alert("correo no valido")
+    }
+}
+/*funciones del REGISTRO*/
+function validarcorreos(c1,clave1){/*esta funcion sirve para darle un requisitos tanto a la contraseña como a los correos */
+  var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+  var esValido = expReg.test(c1);
+  var expRe = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{8,15}[^'\s]/;
+  var esValid = expRe.test(clave1);
+  if(esValido==true){
+    if (esValid==true){
+      comprobarClave();
+    } else{
+      alert("la contraseña no es valida")
+    }
+  } else{
+    alert("correo no valido")
+    }
+}
+function comprobarClave() {/* esta funcion hace la comprobacion de los datos*/
+     var pri = document.getElementById('f1'); 
+     var seg = document.getElementById('f2');   
+     let clave1 = document.f1.clave1.value;
+     let clave2 = document.f1.clave2.value;
+     let c2 = document.f1.c2.value;
+     let c1 = document.f1.c1.value;
+
+     while (!(clave1==="" || clave2==="" || c1===""||c2==="")){
+      if (clave1 == clave2 && c1==c2) {
+         pri.style.display='None'; 
+          seg.style.display='block';
+        /*aqui hace que si la los correos y las contraseñas sean iguales primer bloque desaparezca 
+        y aparezca el segundo*/
+      }
+      if(clave1 != clave2) {
+          alert("Las claves NO coinciden");
+        }
+      if (c1 !=c2){
+          alert("Los correos No coinciden");
+       }
+         break
+     }
+     if(clave1==="" || clave2==="" || c1===""||c2===""){
+         alert("Algun campo vacio")
+        }
+}
+function cambiar(){ /*esta funcion coge los datos de los campos nombre y apellido y los guarda*/
+    var fin = document.getElementById('cot');
+    var seg = document.getElementById('f2');
+    let nombre = document.f2.l1.value;
+    let apellido = document.f2.l2.value;
+    let tel = document.f2.l3.value;
+    let pais = document.f2.l4.value;
+    var texto ="Hola "+  nombre + " "+ apellido + " has creado tu cuenta correctamente";
+    document.getElementById('t1').innerHTML=texto; /*aqui decimos en que identificador vamos a
+    meter el texto de la variable texto*/
+    if (!(nombre===""||apellido===""||tel===""||pais==="")) {
+            seg.style.display='none';/*hacemos el segundo bloque invisible*/
+            fin.style.display='block';/*hacemos el tercer bloque visible*/
+            function redireccion() { /*esta funcion redirige a la principal en un tiempo que nosotros damos*/
+                 window.location = "principal.html";
+            }
+            var temp = setTimeout(redireccion, 3500);
+    } else {
+        alert("Algun campo vacio")
+        
+    }
+}
+/*Funciones de Oro*/
+function metalicas(){/**esta funcion lo que hace es coger el valor que hemos seleccionado y los comparar y depenedindo
+ de cuales oculta una y muestras otras */
+  var metal = Array.from(document.getElementsByClassName("metalico"));
+  var cuero = Array.from(document.getElementsByClassName("cuero"));
+  var cod = document.getElementById("correas").value;
+
+  if (cod === "Cuero") {
+    for (let i = 0; i < cuero.length; i++) {
+      cuero[i].style.display='block';
+     }
+     for (let i = 0; i < metal.length; i++) {
+      metal[i].style.display='none';
+     }
+  }
+  if(cod === "Metalico") {
+    for (let i = 0; i < cuero.length; i++) {
+      cuero[i].style.display='none';
+     }
+     for (let i = 0; i < metal.length; i++) {
+      metal[i].style.display='block';
+     }
+  }
+  if(cod === "Ambas"){
+   for (let i = 0; i < cuero.length; i++) {
+     cuero[i].style.display='block';
+    }
+    for (let i = 0; i < metal.length; i++) {
+     metal[i].style.display='block';
+    }
+  }
+}
+function ordenar() { /** es la funcion que se encarga de ordenar por los precios  */
+  var cod = document.getElementById("ordenar").value;
+  var oro = document.getElementsByClassName("reloj");
+  var cam = [];
+  for (var i = 0; i < oro.length; i++) {
+    cam.push(oro[i].getElementsByClassName("precio")[0].textContent);
+  }
+  if (cod === "Asc") {
+    cam.sort();
+  } else {
+    cam.sort().reverse(); /**aqui le decimos que si no es de forma ascendentes lo haga de forma descendente */
+  }
+  for (var i = 0; i < oro.length; i++){
+    for (let j = 0; j < oro.length; j++) {
+      if (oro[j].getElementsByClassName("precio")[0].textContent===cam[i]) {
+        var caja = oro[j].parentNode.removeChild(oro[j]);
+        document.querySelector(".cuerpo").appendChild(caja);
+        break;
+      }
+    }
+  }
+}
+function tipo(){/**en esta funcion hace exatamente que en la de cuero y metalica pero con los tipos de material de los relojes */
+    var plata = Array.from(document.getElementsByClassName("plata"));
+    var oro = Array.from(document.getElementsByClassName("oro"));
+    var diamante = Array.from(document.getElementsByClassName("diamante"));
+    var rosado = Array.from(document.getElementsByClassName("oro-rosado"))
+    var cod = document.getElementById("tipo").value;
+    if (cod === "Oro") {
+      for (let i = 0; i < oro.length; i++) {
+        oro[i].style.display='block';
+       }
+       for (let i = 0; i < plata.length; i++) {
+        plata[i].style.display='none';
+       }
+       for (let i = 0; i < diamante.length; i++) {
+        diamante[i].style.display='none';
+       }
+       for (let i =0;i < rosado.length;i++){
+        rosado[i].style.display='none';
+       }
+    }
+    if(cod === "Plata") {
+      for (let i = 0; i < oro.length; i++) {
+        oro[i].style.display='none';
+       }
+       for (let i = 0; i < plata.length; i++) {
+        plata[i].style.display='block';
+       }
+       for (let i = 0; i < diamante.length; i++) {
+        diamante[i].style.display='none';
+       }
+       for (let i =0;i < rosado.length;i++){
+        rosado[i].style.display='none';
+       }
+    }
+    if(cod === "Diamante"){
+     for (let i = 0; i < plata.length; i++) {
+       plata[i].style.display='none';
+      }
+      for (let i = 0; i < oro.length; i++) {
+       oro[i].style.display='none';
+      }
+      for (let i = 0; i < diamante.length; i++) {
+        diamante[i].style.display='block';
+       }
+       for (let i =0;i < rosado.length;i++){
+        rosado[i].style.display='none';
+       }
+    }
+    if (cod==="rosado") {
+      for (let i =0;i < rosado.length;i++){
+        rosado[i].style.display='block';
+       }
+       for (let i = 0; i < plata.length; i++) {
+        plata[i].style.display='none';
+       }
+       for (let i = 0; i < oro.length; i++) {
+        oro[i].style.display='none';
+       }
+       for (let i = 0; i < diamante.length; i++) {
+         diamante[i].style.display='none';
+        }
+      
+    }
+    if (cod === "Todos") {
+      for (let i = 0; i < oro.length; i++) {
+        oro[i].style.display='block';
+       }
+       for (let i = 0; i < plata.length; i++) {
+        plata[i].style.display='block';
+       }
+       for (let i = 0; i < diamante.length; i++) {
+        diamante[i].style.display='block';
+       }
+       for (let i =0;i < rosado.length;i++){
+        rosado[i].style.display='block';
+       }
+  }
+}

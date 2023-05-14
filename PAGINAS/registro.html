@@ -1,0 +1,60 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/registro.css">
+    <title>Document</title>
+    <script src="../javaScript/formulario"></script>
+</head>
+<body>
+    <form action="" id="f1" name="f1">
+        <fieldset>
+            <h1>Crea una cuenta</h1>
+            <div class="r1">
+             <label for="c2"><b>Correo Electronico</b></label><br>
+             <input type="email" required name="c1" id="c1"><br>
+             <label for="c1"><b>Confirmar correo</b></label> <br>
+             <input type="email" required name="c2" id="c2"> <br>
+            </div>
+            <label for="clave1"><b>Contraseña</b></label> <br>
+            <input type="password" id="clave1"><br>
+            <label for="clave2"><b>Confirmar contraseña</b></label><br>
+            <input type="password" name="clave2" id="clave2">
+            <div class="botones">
+                <input type="reset" value="Restablecer">
+                <input type="button" value="Siguiente" onclick="validarcorreos(f1.c1.value,f1.clave1.value)">
+            </div>
+
+            
+        </fieldset>
+    </form>
+    <form action="" name="f2" id="f2">
+        <fieldset>
+            <h1>Crea una cuenta</h1>
+            <div class="r1">
+             <label for=""><b>Nombre</b></label><br>
+             <input type="text" required name="c2" id="l1"><br>
+             <label for=""><b>Apellidos</b></label> <br>
+             <input type="text" required id="l2"> <br>
+            </div>
+            <label for=""><b>Telefono</b></label> <br>
+            <input type="tel" pattern="[0-9]{15}"maxlength="15" id="l3" ><br>
+            <label for=""><b>Pais</b></label><br>
+            <input type="text" required maxlength="15"  id="l4">
+            <div class="botones">
+                <input type="reset" value="Restablecer"> <input type="button" value="Crear" onclick="cambiar()">
+            </div>
+            
+        </fieldset>
+    </form>
+    <div id="cot">
+      <div id="hs">
+         <div class="ths">
+            <h1 id="t1"></h1>
+         </div>
+         </div>
+        <img src="../IMAGENES/LGN/Check_green_icon.png" alt="">
+    </div>
+</body>
+</html>

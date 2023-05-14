@@ -1,0 +1,36 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../ESTILOS/login.css">
+    <script src="../javaScript/formulario"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" id="i1">
+        <fieldset class="ip">
+           <h2>Inicia Sesion</h2>
+           <div class="e1">
+            <label for="email">Correo Electronico</label> <br>
+            <input type="email" id="email" class="u1">
+           </div>
+           <div class="e2">
+            <label for="pass">Password</label> <br>
+            <input type="password" id="pass" class="u1">
+           </div>
+           <div class="en">
+            <input type="button" id="bo" value="Inciar Sesion" onclick="validarinicio(i1.email.value,i1.pass.value)">
+           </div>
+        </fieldset>
+        <div class="t">
+          <div class="t1">
+             <p><a href="../PAGINAS/principal.html">Volver</a></p>
+           </div>
+           <div class="t2">
+              <p><a href="registro.html">Registrarse</a></p>
+            </div>
+        </div>    
+    </form>
+</body>
+</html>

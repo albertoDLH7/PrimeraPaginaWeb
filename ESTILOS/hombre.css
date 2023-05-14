@@ -1,0 +1,155 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../IMAGENES/fondos/fondoh.jpg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    background-color: transparent;
+    display: inline-flex;
+    height: 10vh;
+    width: 100vw;
+    z-index: 4;
+    background-color:aliceblue;
+}
+
+.icono{
+    width: 10vw;
+    display: inline-flex;
+    margin-left: 3vw;
+}
+.icono img{
+    width: 9vw;
+    height: 7vh;
+    margin-top: 1.5vh;
+   background-color:rgb(45, 137, 36);
+}
+#titulo{
+    width: 50vw;
+    display: inline-flex;
+}
+#titulo #imagen1{
+    position: absolute;
+    width: 2vw;
+    margin-left: 34.3vw;
+    padding-top: 1.8vh;
+    z-index: 2;
+}
+
+
+#imagen2{
+    display: none;
+}
+#titulo h1{
+    margin-left: 28.2vw;
+    margin-top: 1.5vh;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+    color: rgb(45, 137, 36);
+}
+.menu{
+    width: 50vw;
+}
+#cp{
+    display: inline-flex;
+    list-style: none;
+    color: rgb(45, 137, 36);
+    margin-top: 2vh;
+    margin-left: 5vw;
+
+}
+#cp li{
+    margin-left: 1.3vw;
+    padding: 1vw;
+    border:solid 1px;
+    border-color: transparent;
+}
+#cp a{
+    text-decoration: none;
+    color: rgb(45, 137, 36);
+}
+.cuerpo{
+    text-align: center;
+    margin-top: 4%;
+    grid-column: 3;
+    grid-row: 2;
+}
+.relojes{
+    display:  inline-flex;
+    margin: 2%;
+}
+.caja{
+    width: 30vmax ;
+    height: 20vmax;
+    background: linear-gradient(to  right, #494f56 , #797e84 , #949ca4);
+    margin: 2%;
+    border-radius: 1vmax;
+    overflow: hidden;
+    display: inline-flex;
+    cursor: pointer;
+}
+.t1{
+    text-align: left;
+    margin-left: 2vw;
+    margin-top: 3vh;
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+}
+.imgs{
+    height: 30vh;
+    margin-left: 10vw;
+}
+.imgs1{
+    height: 30vh;
+    margin-left: 10vw;
+    margin-top: 2vh;    
+}
+.imgs2{
+    height: 30vh;
+    margin-left: 11vw;
+    margin-top: 2vh;
+}
+
+.caja:hover img{
+    height: 33vh;
+    margin-left: 13vh;
+    transition: 1s;
+}
+.caja:hover .imgs2{
+    height: 32vh;
+    margin-left: 9vw;
+
+}
+.caja1{
+    width: 30vmax ;
+    height: 20vmax;
+    background: linear-gradient(to  right, #494f56 , #797e84 , #949ca4);
+    margin: 2%;
+    border-radius: 1vmax;
+    overflow: hidden;
+    display: inline-flex;
+    cursor: pointer;
+}
+.correa{
+    margin-left: 16vw;
+}
+.imgs3{
+    height: 30vh;
+    margin-left: 11vw;
+    margin-top: -5vh;
+}
+.caja1:hover img{
+    height:33vh ;
+    transition: 1s;
+}
+a{
+    color: rgb(45, 137, 36);
+    text-decoration: none;
+
+}

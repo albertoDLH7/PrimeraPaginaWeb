@@ -1,0 +1,132 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+header{
+    background-color: aliceblue;
+    display: inline-flex;
+    height: 10%;
+    width: 100%;
+    z-index: 4;
+    border-bottom: solid 2px;
+}
+.icono{
+    width: 10%;
+    display: inline-flex;
+    margin-left: 3%;
+}
+.icono img{
+    width: 90%;
+    height: 70%;
+    margin-top: 9%;
+   background-color:rgb(45, 137, 36);
+}
+#titulo{
+    width: 50%;
+    display: inline-flex;
+}
+#titulo #imagen1{
+position: absolute;
+width: 2%;
+margin-left: 34.3%;
+padding-top: 1%;
+}
+.menu{
+    width: 50%;
+}
+#titulo h1{
+    margin-left: 64%;
+    margin-top: 2%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+    color: rgb(45, 137, 36);
+}
+#cp{
+    display: inline-flex;
+    list-style: none;
+    color: rgb(45, 137, 36);
+    margin-top: 3%;
+    margin-left: 10%;
+
+}
+#cp li{
+    margin-left: 4%;
+    padding: 5%;
+    border:solid 1px;
+    border-color: transparent;
+}
+#cp a{
+    text-decoration: none;
+    color: rgb(45, 137, 36);
+}
+a{
+    color: rgb(45, 137, 36);
+    text-decoration: none;
+}
+.imgs{
+    width: 40vw;
+    border: solid 1px;
+    text-align: center;
+    margin: 4vh;
+    height: 60vh;
+}
+.imgs img{
+    width: 60%;
+    height: 80%;
+    margin-top: 5vh;
+}
+.cuerpo{
+    display: inline-flex;
+}
+.texto1{
+    width: 25vw;
+    text-align: center;
+    margin-top: 40vh;
+    margin-left: 10vw;
+
+}
+.texto1 p{
+    border-radius: 100vmax;
+    border: solid 2px;
+    font-size: x-large;
+    padding: 2VH; 
+}
+.texto1 p:hover{
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+.aux{
+    display: inline-flex;
+    margin-left: 15vw;
+}
+.imgm{
+    width: 4.5vw;
+    margin: 0.5vw;
+    border: solid 1px;
+}
+footer{
+    display: inline-flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: rgb(13, 12, 12);
+    opacity: 0.9;
+}
+footer a{
+    text-decoration: none;
+    color: rgba(18, 120, 74, 0.975);
+}
+footer ul{
+    list-style: none;
+    margin-left: 20vw;
+    margin-top: 2vh;
+    color :rgb(45, 137, 36);
+    
+}
+footer h2{
+    margin-left: 10vw;
+    margin-top: 4vh;
+    color:rgb(45, 137, 36);
+    opacity: 1;
+}

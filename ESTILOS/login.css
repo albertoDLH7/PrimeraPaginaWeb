@@ -1,0 +1,84 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url(../IMAGENES/LGN/1386515920.webp);
+    background-size: cover;
+}
+form{
+    background-color: black;
+    color: white;
+    opacity: 0.9;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 20%;
+    margin-top: 10%;
+    height: 50%;
+}
+fieldset{
+    height: 80%;
+    border: none;
+}
+h2{
+    text-align: center;
+    margin-top: 4%;
+}
+
+.e1{
+    text-align: center;
+    margin-top: 5%;
+    font-size:140%;
+}
+.e2{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 140%;    
+}
+.u1{
+    margin-top: 2%;
+    background-color: black;
+    opacity: 0,8;
+    border: solid 1px;
+    border-color: rgb(203, 202, 202);
+    border-radius: 100vmax;
+    font-size: 100%;
+    color: rgb(203, 202, 202);
+    text-align: center;
+}
+.en{
+    text-align: center;
+}
+    #bo{
+    border-radius: 100vmax;
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    text-decoration: none;
+    font-size:120%;  
+    margin-top: 5%;
+    padding: 1%;
+    }
+    .t1{
+        display: inline-flex;
+        margin-left: 10%;
+    }
+    .t2{
+     display: inline-flex;
+     margin-left: 60%;
+    }
+    .t a:hover{
+        background-color: antiquewhite;
+        color: black;
+        transition: 2s;
+        border-radius: 100vmax;
+        padding: 5%;
+        overflow: hidden;
+        opacity: 0.6;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+   

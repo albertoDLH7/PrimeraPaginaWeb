@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+        background-image: url(../../IMAGENES/LGN/1386515920.webp);
+    }
+    .caja{
+        border: solid 2px;
+        width: 20vw;
+        text-align: center;
+        margin: 30vh;
+        margin-left: 40vw;
+        height: 30vh;
+        border-radius: 1vmax;
+        background-color: white;
+    }
+    .caja2{
+        margin-top: 10vh;
+
+    }
+
+</style>
+<body>
+
+    <div class="caja">
+        <div class="caja2">
+            <form action="">
+                <label for="">Tarjeta de credito:</label> 
+                <input type="text" placeholder="xxxx-xxxx-xxxx-xxxx" required><br>
+                <label for="">Fecha caducidad:</label>
+                <input type="date"><br>
+                <label for="">CCV:</label>
+                <input type="text" maxlength="3" pattern="[0-9]" required><br>
+                <input type="reset" value="borrar">
+                <input type="submit" value="confirmar">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

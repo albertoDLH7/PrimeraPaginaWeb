@@ -1,0 +1,135 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-align: center;
+}
+header{
+    background-color: transparent;
+    display: inline-flex;
+    height: 10vh;
+    width: 100vw;
+    z-index: 4;
+    background-color: aliceblue;
+}
+
+.icono{
+    width: 10vw;
+    display: inline-flex;
+    margin-left: 3vw;
+}
+.icono img{
+    width: 9vw;
+    height: 7vh;
+    margin-top: 1.5vh;
+   background-color:rgb(45, 137, 36);
+}
+#titulo{
+    width: 50vw;
+    display: inline-flex;
+}
+#titulo #imagen1{
+    position: absolute;
+    width: 2vw;
+    height: 3.5vh;
+    margin-left: 34.3vw;
+    padding-top: 1.4vh;
+    z-index: 2;
+}
+
+
+#titulo h1{
+    margin-left: 28.2vw;
+    margin-top: 1.5vh;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 300%;
+    color: rgb(18, 120, 74, 0.5);
+}
+.menu{
+    width: 50vw;
+}
+#cp{
+    display: inline-flex;
+    list-style: none;
+    color: rgb(18, 120, 74, 0.5);
+    margin-top: 2vh;
+    margin-left: 5vw;
+
+}
+#cp li{
+    margin-left: 1.3vw;
+    padding: 1vw;
+    border:solid 1px;
+    border-color: transparent;
+}
+#cp a{
+    text-decoration: none;
+    color: rgb(18, 120, 74, 0.5);
+}
+a{
+    color: rgb(45, 137, 36);
+    text-decoration: none;
+}
+h2{
+    text-align: center;
+    margin-top: 2vh;
+    font-style: italic;
+}
+.cuerpo{
+    display:inline-grid;
+    grid-template-columns: repeat(4,25%);
+    width: 95vw;
+    text-align: center;
+    margin-top: 2%;
+}
+img{
+    width: 15vw;
+    height: 30vh;
+}
+.cuero div{
+    width: 20vw;
+    height: 40vh;
+}
+
+.r1 img{
+    width: 14vw;
+}
+.r2 img{
+    width:20vw;
+}
+.r3 img{
+    width: 10vw;
+}
+.cuerpo p{
+    margin-top: 10%;
+} 
+select{
+border-radius: 100vmax;
+padding: 0.5vw;
+margin-top: 2vh;
+}
+footer{
+    display: inline-flex;
+    height: 20vh;
+    width: 100vw;
+    background-color: rgb(13, 12, 12);
+    opacity: 0.9;
+}
+footer a{
+    text-decoration: none;
+    color: rgba(18, 120, 74, 0.975);
+}
+footer ul{
+    list-style: none;
+    margin-left: 20vw;
+    margin-top: 2vh;
+    color :rgb(45, 137, 36);
+    
+}
+footer h2{
+    margin-left: 10vw;
+    margin-top: 4vh;
+    color:rgb(45, 137, 36);
+    opacity: 1;
+}
+
